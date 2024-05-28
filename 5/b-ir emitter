@@ -1,0 +1,17 @@
+const int irLedPin = 8;
+void setup() {
+ Serial.begin(9600);
+ // Configure the IR LED pin as an output
+ pinMode(irLedPin, OUTPUT);
+}
+void loop() {
+ // Turn on the IR LED to emit IR signals
+ digitalWrite(irLedPin, HIGH);
+ Serial.println("EMITTED");// Set the pin voltage to HIGH
+ delay(100); // Wait for 100 milliseconds (adjust as needed)
+
+ // Turn off the IR LED
+ digitalWrite(irLedPin, LOW);
+ Serial.println("NOT EMITTED"); // Set the pin voltage to LOW
+ delay(100); // Wait for 100 milliseconds (adjust as needed)
+}
